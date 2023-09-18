@@ -21,10 +21,11 @@ const MainSearch = () => {
   };
 
   useEffect(() => {
-    if (sessionStorage.getItem("searched-jobs") !== "") {
+    if (sessionStorage.getItem("searched-jobs")) {
       dispatch(getJobsAction(sessionStorage.getItem("searched-jobs")));
       setQuery(sessionStorage.getItem("searched-jobs"));
     }
+    // eslint-disable-next-line
   }, []);
 
   return (

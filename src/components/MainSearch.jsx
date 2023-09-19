@@ -37,7 +37,13 @@ const MainSearch = () => {
         <Col xs={10} className="mx-auto">
           <div className="d-flex justfy-content-between align-items-center">
             <Form className="flex-grow-1 me-2" onSubmit={handleSubmit}>
-              <Form.Control type="search" value={query} onChange={handleChange} placeholder="type and press Enter" />
+              <Form.Control
+                type="search"
+                value={query}
+                onChange={handleChange}
+                placeholder="type and press Enter"
+                required
+              />
             </Form>
             <Link to="/favourite">
               <Button variant="info">Favourite</Button>
